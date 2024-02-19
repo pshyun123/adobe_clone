@@ -1,0 +1,196 @@
+.body{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: rgb(59, 58, 58);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    background-color: white;
+    padding: 8px 16px;
+}
+.navbar__logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: red;
+    align-items: center;
+    /* display: flex; */
+}
+/* 메뉴바 메뉴 - 점 없애주고 패딩값 없앰 */
+.navbar__menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+/* 메뉴바 메뉴리스트 사이 간격조정 */
+.navbar__menu li {
+    padding: 8px 40px;
+    margin: 0 0 0 0px;
+    text-align: center;
+}
+
+/* 오른쪽 돋보기 아이콘 설정 */
+.navbar_icons {
+    list-style: none;
+    color: rgb(59, 58, 58);
+}
+/* 반응형 웹 네비게이션 바 */
+@media screen and (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar__menu{
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+    }
+    .navbar__menu li{
+        width: 100%;
+        text-align: center;
+    }
+}
+/* 네이게이션 메뉴에 커서 올리면 */
+.navbar__menu li:hover{
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+/* 돋보기 아이콘.. */
+.navbar__icons li {
+    padding: 8px 10px;
+    list-style: none;
+}
+/* 네이게이션 바 토글 버튼-안된다.ㅠㅠ */
+.navbar__toogleBtn{
+    position: absolute;
+}
+
+/* 파란 버튼 관련 */
+.button a{
+    color: white;
+    text-decoration: none;
+}
+.button {
+    background-color: #0d56af;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 10px; /* 테두리를 둥글게 만들기 위한 속성 */
+}
+.button:hover {
+    background-color: #1473e6;
+    color: white;
+}
+
+/* 드롭다운 메뉴 */
+.dropdown a {
+    position: relative;
+    cursor: pointer;
+}
+
+/* 드롭다운되는 메뉴 영역을 지정 */
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 8px 0px rgba(231, 230, 230, 0.2);
+}
+
+.dropdown-content a {
+    color: rgb(39, 39, 39);
+    padding: 12px 8px;
+    text-decoration: none;
+    display: block;
+}   
+
+/* 서브 메뉴 숨기기 */
+.dropdown-content {
+    display: none;
+}
+
+/* drop down 만들기 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* 서브 메뉴 항목에 hover 효과 넣기 */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* 이미지 위에 글자 넣기-아래 세개 */
+.main-warp{
+    display: flex; /* flex 컨테이너 설정 */
+    width: flex;
+    height: flex;
+    margin: 0px auto;
+    position: relative;
+    
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+.main-warp img {
+    width: 20%;
+    height: 20%;
+    vertical-align: middle;
+}
+.main-text{
+    position: absolute;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    top: 30%;
+	left: 50%;
+    transform: translate( -50%, -50% );
+    color: white;
+}
+/* 이미지 사이즈 조절 */
+.main-image {
+    margin: 0px;
+    background-image: url("./images/첫배경.jpg");
+    background-size: cover;
+    height: 320px;
+    max-width: auto; /* 이미지 최대 너비 설정 */
+    min-width: 600px;
+    min-height: auto;
+    display: flex;
+}
+
+/* container section */
+section{
+    width: 800px;
+    margin: 0 auto;
+}
+h3{
+    font-size:30px;
+}
+h4{
+    font-size: 25px;
+}
+/* 원하는 무엇이든~ */
+h5{
+    font-size: 20px;
+}
+h6{
+    font-size:15px;
+}
+p{
+    line-height:20px;
+	font-size:14px;
+}
+article{
+    width: 350px;
+    height: 500px;
+    margin: 35px;
+    padding: 10px;
+    float:left;
+    /* border: 1px #ccc solid; */
+}
+
+.container-middle {
+    display: flex;
+}
